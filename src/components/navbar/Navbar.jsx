@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import styles from './navbar.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
-import NavLink from './NavLink/NavLink';
+import NavLink from './navLink/NavLink';
 
 export const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
