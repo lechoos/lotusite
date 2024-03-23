@@ -1,0 +1,18 @@
+@use '../../scss/utils' as *;
+
+.policy {
+  margin-bottom: 6rem;
+	p {
+		text-align: justify;
+	}
+}
+
+.title {
+  padding-top: 14rem;
+	text-align: center;
+}
+
+.subtitle {
+  margin-top: 4rem;
+  text-align: center;
+}

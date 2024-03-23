@@ -66,20 +66,14 @@ const ServicesPage = () => {
 							<ServiceCard title='Przewaga technologiczna'>
 								<MiniText classes={styles.mini}>
 									Nie tworzymy stron na szablonach, uważamy, że byłoby to nieuczciwe względem Ciebie. Piszemy je od
-									zera, korzystając głównie z technologii Next.js, która od kilku lat przoduje w rankingach
-									popularności.
+									zera, korzystając tylko i wyłącznie z najnowszych technologii.
 								</MiniText>
 								<br />
 								<MiniText classes={styles.mini}>
-									Dzięki tej technologii tej technologii nasze strony już na starcie są daleko przed stronami Twojej
+									Dzięki temu nasze strony już na starcie są daleko przed stronami Twojej
 									konkurencji. Są po prostu szybkie. Bardzo szybkie. Niezależnie od tego, czy jest to prosta wizytówka,
 									czy rozbudowana strona, gdzie można się wręcz zgubić - strona ładuje się praktycznie natychmiast. W
 									sam raz, by przykuć uwagę Twoich klientów.
-								</MiniText>
-								<br />
-								<MiniText classes={styles.mini}>
-									Next.js pomaga również w optymalizacji SEO, dzięki czemu Twoja strona pokaże się na pierwszych
-									miejscach wyszukiwarek.
 								</MiniText>
 							</ServiceCard>
 							<ServiceCard title='Wszystko pod kontrolą'>

@@ -26,8 +26,8 @@ export const send = async (formData) => {
 	const fDate = formatDate(date);
 
 	const data = await resend.emails.send({
-		from: 'formularz@lotusite.pl',
-		to: 'kontakt@lotusite.pl',
+		from: 'kontakt@lotusite.pl',
+		to: 'formularz.lotusite@gmail.com',
 		subject: `${formData.company} | ${fDate}` ,
 		react: GithubAccessTokenEmail(formData),
 	});

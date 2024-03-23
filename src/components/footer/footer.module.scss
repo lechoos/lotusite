@@ -52,6 +52,7 @@
 .contact {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	gap: 1.5rem;
 	margin-top: 3rem;
 
@@ -63,6 +64,10 @@
 
 	a {
 		text-decoration: none;
+	}
+
+	@include medium {
+		align-items: flex-start;
 	}
 }
 
