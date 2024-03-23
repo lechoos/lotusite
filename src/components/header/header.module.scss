@@ -1,0 +1,87 @@
+@use '../../scss/utils' as *;
+
+.header {
+	padding: 6rem 1rem 15rem;
+	background: linear-gradient(0deg, rgba(84, 174, 223, 1) 0%, rgba(41, 88, 162, 1) 100%);
+	text-align: center;
+
+	@include medium {
+		padding: 7rem 2rem 9rem;
+	}
+}
+
+.title {
+	margin: 4.5em auto 1em;
+	max-width: 350px;
+	color: $bgColor;
+	@include firstSize;
+
+	@include medium {
+		margin-top: 3em;
+		max-width: 425px;
+	}
+
+	span {
+		background: linear-gradient(133deg, rgba(240, 177, 99, 1) 0%, rgba(206, 132, 173, 1) 100%);
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		&::selection {
+			-webkit-text-fill-color: #000;
+		}
+	}
+}
+
+.text {
+	position: relative;
+	margin-inline: auto;
+	margin-bottom: 2.5em;
+	max-width: 350px;
+	font-size: 1.4rem;
+	color: $bgColor;
+
+	span {
+		font-weight: 700;
+	}
+}
+
+.mouse {
+	position: relative;
+	margin: 5em auto 0;
+	width: 55px;
+	height: 90px;
+	border: 5px solid $bgColor;
+	border-radius: 30px;
+}
+
+.dot {
+	position: absolute;
+	top: 10%;
+	left: calc(50% - 5px);
+	width: 10px;
+	height: 10px;
+	background-color: $bgColor;
+	border-radius: 50%;
+	animation: dotAnimation 3s infinite;
+}
+
+@keyframes dotAnimation {
+	0% {
+		opacity: 0;
+	}
+
+	15% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	85% {
+		transform: translateY(50px);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(50px);
+		opacity: 0;
+	}
+}

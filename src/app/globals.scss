@@ -1,0 +1,60 @@
+@use '../scss/utils' as *;
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+*::selection {
+	background-color: $accentColor;
+	color: #fff;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	position: relative;
+	min-height: 100vh;
+	background-color: $bgColor;
+	overflow-x: hidden;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+// #navBtn {
+// 	display: none;
+// 	font-size: 1.5rem;
+
+// 	@include medium {
+// 		display: inline-block;
+// 	}
+// }
+
+#contactBtn {
+	z-index: 1;
+}
+
+.section {
+	position: relative;
+	@include section;
+	z-index: 0;
+
+	&--blue {
+		@include section;
+		color: $bgColor;
+		background-color: $mainColor;
+	}
+}
+
+.sticky-body {
+	overflow: hidden;
+}

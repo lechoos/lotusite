@@ -1,0 +1,98 @@
+@use '../../scss/utils' as *;
+
+.title {
+	margin-top: 4rem;
+
+	@include small {
+		margin-top: 2rem;
+	}
+}
+
+.text {
+	max-width: none;
+
+	@include small {
+		max-width: 519px;
+	}
+}
+
+.card-grid {
+	display: grid;
+	row-gap: 5rem;
+	margin-top: 6rem;
+
+	@include small {
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		column-gap: 2rem;
+	}
+
+	@include medium {
+		margin-top: 8rem;
+	}
+
+	@include large {
+		grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+	}
+}
+
+.links {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	margin-top: 6rem;
+	margin-bottom: 6rem;
+
+	@include small {
+		margin-top: 9rem;
+	}
+
+	@include medium {
+		flex-direction: row;
+		justify-content: center;
+		margin-top: 14rem;
+	}
+}
+
+.image-container {
+	display: none;
+	position: absolute;
+	bottom: 8rem;
+	left: -225px;
+	width: 638.58px;
+	height: 332.61px;
+	transform: rotate(45deg);
+	opacity: 0.25;
+
+	@include large {
+		display: block;
+	}
+}
+
+.image {
+	display: none;
+	position: absolute;
+	
+	&[data-image='1'] {
+		top: 19rem;
+		right: -2rem;
+		opacity: 0.3;
+		animation: rotate 12s linear infinite;
+	}
+
+	&[data-image='2'] {
+		top: -6rem;
+		left: -25rem;
+		opacity: 0.3;
+	}
+
+	@include medium {
+		display: block;
+	}
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(-360deg);
+	}
+}

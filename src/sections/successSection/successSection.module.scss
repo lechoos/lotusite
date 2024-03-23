@@ -1,0 +1,18 @@
+@use '../../scss/utils' as *;
+
+.card-grid {
+	display: flex;
+	flex-direction: column;
+	gap: 5rem;
+	margin-block: 7rem;
+
+	@include medium {
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	@include extra {
+		margin-top: 8rem;
+	}
+}

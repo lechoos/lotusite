@@ -1,0 +1,127 @@
+@use '../../scss/utils' as *;
+
+.footer {
+	position: relative;
+	padding: 10rem 2rem;
+	background-color: $mainColor;
+	z-index: 0;
+
+	@include medium {
+		padding: 16rem 2rem;
+	}
+}
+
+.footer-top {
+	margin-bottom: 5rem;
+
+	@include medium {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+	}
+}
+
+.footer-left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.footer-right {
+	@include medium {
+		display: flex;
+		gap: 5rem;
+	}
+
+	@include large {
+		gap: 10rem;
+	}
+}
+
+.title {
+	font-size: 4rem;
+	font-weight: 400;
+	color: $bgColor;
+
+	@include small {
+		font-size: 5rem;
+	}
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	margin-top: 3rem;
+
+	p,
+	a {
+		font-size: 1.6rem;
+		color: $bgColor;
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+
+.contact-title {
+	color: $bgColor;
+	font-size: 2.5rem;
+}
+
+.footer-links {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 1rem;
+	margin-top: 4rem;
+
+	@include medium {
+		flex-direction: column;
+		justify-content: space-between;
+		margin-top: 3rem;
+	}
+}
+
+.link {
+	font-size: 1.4rem;
+	color: $bgColor;
+	text-decoration: none;
+	transition: opacity 0.3s;
+
+	&:hover {
+		opacity: 0.75;
+	}
+}
+
+.footer-bottom {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2em;
+	border-top: 1px solid $bgColor;
+
+	p {
+		font-size: 1.6rem;
+		color: $bgColor;
+	}
+}
+
+.decoration {
+	display: none;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	opacity: 0.3;
+	z-index: -1;
+
+	@include medium {
+		display: block;
+	}
+}

@@ -1,0 +1,151 @@
+@use '../../scss/utils' as *;
+
+.cards {
+	@include large {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 3rem;
+	}
+}
+
+.card {
+	margin-top: 8rem;
+	width: minmax(300px, 500px);
+}
+
+.title {
+	text-align: center;
+}
+
+.text {
+	max-width: none;
+	text-align: justify;
+}
+
+.bolded {
+	font-weight: 700;
+}
+
+.image-container {
+	position: relative;
+	margin-inline: auto;
+	width: 100%;
+	max-width: 600px;
+	aspect-ratio: 16/9;
+
+	img {
+		border-radius: 16px;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color: $mainColor;
+		border-radius: 16px;
+	}
+
+	&[data-id='first']::before {
+		top: 10px;
+		left: 10px;
+	}
+}
+
+.linkContainer {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 5rem;
+}
+
+.finalText {
+	max-width: none;
+	margin-top: 3rem;
+	margin-bottom: 4rem;
+}
+
+.image {
+	display: none;
+	position: absolute;
+	z-index: -1;
+
+	@include large {
+		display: block;
+	}
+
+	&[data-image='1'] {
+		top: -7rem;
+		left: -7rem;
+		opacity: 0.1;
+	}
+
+	&[data-image='2'] {
+		bottom: 83rem;
+		left: 22rem;
+		opacity: 0.1;
+
+		@include large {
+			animation: rotate 7s linear infinite;
+		}
+	}
+
+	&[data-image='3'] {
+		top: -27rem;
+		right: -8rem;
+		transform: rotate(-20deg);
+		opacity: 0.2;
+
+		@include large {
+			animation: zoom 10s linear infinite;
+		}
+	}
+
+	&[data-image='4'] {
+		bottom: 5rem;
+		right: -11rem;
+		transform: rotate(338deg);
+		opacity: 0.3;
+
+    @include large {
+      animation: move 120s linear infinite;
+    }
+	}
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes zoom {
+	0% {
+		transform: scale(1) rotate(338deg);
+	}
+
+	50% {
+		transform: scale(1.01) rotate(338deg);
+	}
+
+	100% {
+		transform: scale(1) rotate(338deg);
+	}
+}
+
+@keyframes move {
+  0% {
+    transform: rotate(-20deg) translate(5%, -5%);
+  }
+  
+  25% {
+    transform: rotate(-20deg) translate(0%, 0%);
+  }
+
+  75% {
+    transform: rotate(-20deg) translate(10%, -10%);
+  }
+
+  100% {
+    transform: rotate(-20deg) translate(5%, -5%);
+  }
+}

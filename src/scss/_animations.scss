@@ -1,0 +1,29 @@
+@use './media' as *;
+
+// Klasy animacji
+
+@mixin block($value) {
+  @include medium {
+    animation: block $value forwards;
+  }
+}
+
+@mixin inline($value) {
+  @include medium {
+    animation: inline $value forwards;
+  }
+}
+
+// Animacje
+
+@keyframes block {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes inline {
+  to {
+    transform: translateX(0);
+  }
+}

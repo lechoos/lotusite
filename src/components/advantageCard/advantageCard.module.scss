@@ -1,0 +1,88 @@
+@use '../../scss/utils' as *;
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.circle {
+	position: relative;
+	margin-bottom: 1.5rem;
+	width: 100px;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	z-index: 0;
+
+	.circ {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		background: inherit;
+		transform: translate(-50%, -50%);
+		z-index: -1;
+
+		@include medium {
+			animation: pulse 6s linear infinite;
+			animation-delay: var(--delay);
+		}
+	}
+}
+
+.icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.title {
+	font-weight: 700 !important;
+	text-align: center;
+}
+
+.blue {
+	background-color: $mainColor;
+}
+
+.pink {
+	background-color: $accentColor;
+}
+
+@media (max-width: 677.5px) {
+	.pink {
+		background-color: $mainColor;
+	}
+}
+
+@keyframes pulse {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0.8);
+	}
+
+	5% {
+		opacity: 1;
+	}
+
+	10% {
+		opacity: 0.6;
+	}
+
+	95% {
+		transform: translate(-50%, -50%) scale(1.5);
+	}
+
+	96% {
+		opacity: 0;
+	}
+
+	100% {
+		transform: translate(-50%, -50%) scale(1.5);
+		opacity: 0;
+	}
+}

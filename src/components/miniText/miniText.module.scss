@@ -1,0 +1,5 @@
+@use '../../scss/utils' as *;
+
+.text {
+  @include miniText(var(--base), var(--opacity));
+}

@@ -1,0 +1,94 @@
+@use '../../scss/utils' as *;
+
+@use '../../scss/utils' as *;
+
+.nav {
+	position: absolute;
+	left: 50%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+	transform: translateX(-50%);
+	z-index: 5;
+
+	&Items {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		height: 30vh;
+		background-color: $bgColor;
+		border-bottom: 3px solid $mainColor;
+		transform: translateY(-25%);
+		transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+		overflow: hidden;
+		opacity: 0;
+		visibility: hidden;
+		z-index: 2;
+
+		@include medium {
+			position: static;
+			flex-direction: row;
+			height: auto;
+			background-color: transparent;
+			border-bottom: none;
+			transform: translateY(0);
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}
+
+.logo {
+	position: relative;
+	width: 50px;
+	aspect-ratio: 1/1;
+
+	@include small {
+		width: 80px;
+	}
+}
+
+.button {
+	position: relative;
+	z-index: 5;
+
+	@include medium {
+		display: none;
+	}
+}
+
+.is-active {
+	transform: translateX(0);
+	opacity: 1;
+	visibility: visible;
+}
+
+.decoration {
+	position: absolute;
+	right: 80%;
+	opacity: 0.3;
+
+	@include small {
+		display: inline;
+	}
+
+	@include medium {
+		display: none;
+	}
+}
+
+.link {
+	animation: linkAnimation 0.5s forwards;
+}
+
+@keyframes linkAnimation {
+	to {
+		transform: translateY(0);
+	}
+}

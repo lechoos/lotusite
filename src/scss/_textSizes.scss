@@ -1,0 +1,104 @@
+@use './media' as *;
+@use './variables' as *;
+
+@mixin firstSize {
+	font-size: 2.8rem;
+
+	@include small {
+		font-size: 3.4rem;
+	}
+
+	@include medium {
+		font-size: 3.8rem;
+	}
+
+	@include large {
+		font-size: 4.2rem;
+	}
+}
+
+@mixin secondSize {
+	font-size: 2.4rem;
+
+	@include small {
+		font-size: 2.8rem;
+	}
+
+	@include medium {
+		font-size: 3.2rem;
+	}
+
+	@include large {
+		font-size: 3.6rem;
+	}
+}
+
+@mixin thirdSize {
+	font-size: 2rem;
+	font-weight: 400;
+
+	@include small {
+		font-size: 2.4rem;
+	}
+
+	@include medium {
+		font-size: 2.2rem;
+	}
+
+	@include large {
+		font-size: 2.6rem;
+	}
+}
+
+@mixin textSize {
+	font-size: 1.4rem;
+
+	@include medium {
+		font-size: 1.6rem;
+	}
+
+	@include large {
+		font-size: 1.8rem;
+	}
+}
+
+@mixin miniText($size, $opacity) {
+	font-size: $size;
+	opacity: $opacity;
+
+	@include small {
+		font-size: calc($size * 1.1);
+	}
+
+	@include medium {
+		font-size: calc($size * 1.21);
+	}
+
+	@include large {
+		font-size: calc($size * 1.331);
+	}
+
+	@include extra {
+		font-size: 1.6rem;
+	}
+}
+
+@mixin multiplyText($tSize, $multi) {
+	font-size: $tSize;
+
+	@include small {
+		font-size: calc($tSize * $multi);
+	}
+
+	@include medium {
+		font-size: calc($tSize * $multi * $multi);
+	}
+
+	@include large {
+		font-size: calc($tSize * $multi * $multi * $multi);
+	}
+
+	@include extra {
+		font-size: calc($tSize * $multi * $multi * $multi * $multi);
+	}
+}

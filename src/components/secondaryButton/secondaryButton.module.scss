@@ -1,0 +1,12 @@
+@use '../../scss/utils' as *;
+
+.link {
+  @include buttonLink($mainColor, $mainColor) {
+    border: 3px solid $mainColor;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $bgColor;
+    }
+  }
+}

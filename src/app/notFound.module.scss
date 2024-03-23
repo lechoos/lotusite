@@ -1,0 +1,14 @@
+@use '../scss/utils' as *;
+
+.notFound {
+  padding: 25rem 1rem;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+
+  @include small {
+    flex-direction: row;
+  }
+}

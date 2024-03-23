@@ -1,0 +1,94 @@
+@use '../../scss/utils' as *;
+
+.card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+  justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+	margin: 0 auto;
+	padding: 2em;
+	width: 85%;
+  min-height: 332px;
+  background-color: $bgColor;
+	border: 3px solid $mainColor;
+	border-radius: 16px;
+
+  @include medium {
+    width: 45%;
+  }
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: -15px;
+		left: -15px;
+		width: calc(100% + 30px);
+		height: calc(100% + 30px);
+		border: 3px solid $accentColor;
+		border-radius: 26px;
+    z-index: -1;
+	}
+}
+
+.subtitle {
+	text-align: center;
+}
+
+.card-text {  
+  max-width: 250px;
+	text-align: center;
+
+  @include small {
+    max-width: 400px;
+  }
+
+  @include large {
+    max-width: 575px;
+  }
+}
+
+.link {
+	@include multiplyText(1.3rem, 1.1);
+
+  @include buttonLink($mainColor, $mainColor) {
+    border: 3px solid $mainColor;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $bgColor;
+    }
+  }
+}
+
+.imageContainer {
+  position: absolute;
+  bottom: -25px;
+  left: -183px;
+  display: none;
+  height: 125%;
+  aspect-ratio: 1/1;
+  z-index: -1;
+
+  @include large {
+    display: block;
+  }
+}
+
+.card[data-class="second"] {
+  .imageContainer {
+    top: -96px;
+    right: -91px;
+    bottom: auto;
+    left: auto;
+    transform: rotate(225deg);
+  }
+}
+
+.card[data-class="third"] {
+  .imageContainer {
+    right: -188px;
+    left: auto;
+  }
+}

@@ -1,0 +1,35 @@
+@use '../../scss/utils' as *;
+
+.input-container {
+	position: relative;
+	z-index: 0;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: -0.5rem;
+		left: -0.5rem;
+		width: calc(100% + 1rem);
+		height: calc(100% + 1rem);
+		background-color: $bgColor;
+		border-radius: 10px;
+		z-index: -1;
+	}
+}
+
+.text-input {
+	position: relative;
+	padding: 2rem;
+	width: 100%;
+	font-size: 2.3rem;
+	color: $mainColor;
+	background: $bgColor;
+	border: 3px solid $mainColor;
+	border-radius: 6px;
+	z-index: 1;
+	outline: none;
+
+	&:focus {
+		border: 3px solid $accentColor;
+	}
+}

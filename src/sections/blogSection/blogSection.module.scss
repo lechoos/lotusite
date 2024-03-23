@@ -1,0 +1,42 @@
+@use '../../scss/utils' as *;
+
+.screens {
+	margin-top: 10rem;
+}
+
+.title {
+	margin-top: 4rem;
+}
+
+.bolded {
+	font-weight: 700;
+}
+
+.image {
+	display: none;
+	position: absolute;
+	z-index: -1;
+
+	@include large {
+		display: block;
+	}
+
+	&[data-image='1'] {
+		top: 40rem;
+		right: -4rem;
+		opacity: 0.2;
+	}
+
+	&[data-image='2'] {
+		top: 60rem;
+		left: -16rem;
+		opacity: 0.4;
+	}
+
+	&[data-image='3'] {
+		bottom: -3rem;
+		right: -9rem;
+		opacity: 0.4;
+		transform: rotate(90deg);
+	}
+}

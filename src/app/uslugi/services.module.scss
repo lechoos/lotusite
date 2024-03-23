@@ -1,0 +1,45 @@
+@use '../../scss/utils' as *;
+
+.title {
+	margin-top: 15rem;
+}
+
+.cards-container {
+	display: grid;
+	gap: 2rem;
+	margin-block: 4rem;
+}
+
+.text-container {
+	display: flex;
+	flex-direction: column;
+	margin-top: 4rem;
+	margin-bottom: 8rem;
+}
+
+.text {
+	margin: 0 !important;
+	max-width: none !important;
+	text-align: justify !important;
+}
+
+.mini {
+	text-align: justify;
+	line-height: 1.6;
+}
+
+.final-items {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 3.5rem;
+	margin-block: 7rem;
+}
+
+.final {
+	text-align: justify;
+
+	span {
+		font-weight: 700;
+	}
+}

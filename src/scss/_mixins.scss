@@ -1,0 +1,52 @@
+@use './media' as *;
+
+@mixin section {
+	padding: 7rem 1rem;
+
+	@include small {
+		padding: 10rem 2rem;
+	}
+
+	@include medium {
+		padding: 12rem 2rem;
+	}
+}
+
+@mixin buttonLink($textColor, $bgHover) {
+	position: relative;
+	display: inline-block;
+	padding: 1.4em 2em;
+	font-size: 1.4rem;
+	color: $textColor;
+	border-radius: 16px;
+	border: none;
+	text-decoration: none;
+	overflow: hidden;
+	cursor: pointer;
+	z-index: 0;
+
+	@include small {
+		font-size: 1.6rem;
+	}
+
+	&:hover::before {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 101%;
+		height: 100%;
+		background-color: $bgHover;
+		z-index: -1;
+		transform: scaleX(0);
+		transform-origin: right;
+		transition: transform 0.3s;
+	}
+
+	@content;
+}

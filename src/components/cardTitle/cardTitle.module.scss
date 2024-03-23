@@ -1,0 +1,8 @@
+@use '../../scss/utils' as *;
+
+.title {
+  font-weight: 400;
+	color: $mainColor;
+
+  @include thirdSize;
+}

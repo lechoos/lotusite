@@ -1,0 +1,55 @@
+@use '../../scss/utils' as *;
+
+.section {
+  padding-inline: 3rem;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  border-radius: 16px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.last-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  label {
+    margin-bottom: 0;
+    font-size: 1.4rem;
+  }
+}
+
+.button {
+  @include buttonLink($bgColor, $bgColor);
+
+  background-color: $mainColor;
+  border: 3px solid $bgColor;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $mainColor;
+  }
+}
+
+.error {
+  padding: 2rem;
+  font-size: 2rem;
+  background-color: #f00;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.link {
+  color: $bgColor;
+  text-decoration: none;
+  transition: opacity 0.3s;
+  
+  &:hover {
+    opacity: 0.6;
+  }
+}

@@ -1,0 +1,8 @@
+@use '../../scss/utils' as *;
+
+.link {
+  @include buttonLink($bgColor, #00000048) {
+    padding: 1.5em 2em;
+    background-image: linear-gradient(64deg, $gradientColor, $accentColor);
+  }
+}
