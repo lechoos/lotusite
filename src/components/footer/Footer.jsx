@@ -45,7 +45,7 @@ export const Footer = () => {
 							<Link className={styles.link} href='/uslugi'>
 								Usługi
 							</Link>
-							<Link className={styles.link} href='/uslugi'>
+							<Link className={styles.link} href='/kontakt'>
 								Kontakt
 							</Link>
 							<Link className={styles.link} href='/polityka-prywatnosci'>
