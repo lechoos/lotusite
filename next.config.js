@@ -6,7 +6,7 @@ module.exports = {
   },
   experimental: {
     serverActions: {
-      allowedOrigins: ["192.109.244.63", "localhost:3000"]
+      allowedOrigins: ["lotusite.pl", "localhost:3000"]
     }
   }
 }
