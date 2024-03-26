@@ -11,8 +11,13 @@ export const metadata = {
 	title: 'Najlepsze strony internetowe dla Twojej Firmy | Toruń | Lotusite',
 	description: 'Strony internetowe Toruń - umów się na darmową konsultację! Naszą specjalizacją jest tworzenie nowoczesnych stron internetowych. Zadzwoń pod 723 741 772.',
 	icons: {
-		icon: '/favicon.ico',
-	},
+    icon: [
+      {
+        url: "/favicon.ico", // /public path
+        href: "/favicon.ico", // /public path
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
