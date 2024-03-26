@@ -24,6 +24,11 @@
   }
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
 .button {
   @include buttonLink($bgColor, $bgColor);
 
@@ -45,6 +50,7 @@
 }
 
 .link {
+  align-self: center;
   color: $bgColor;
   text-decoration: none;
   transition: opacity 0.3s;

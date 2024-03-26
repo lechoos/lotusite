@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import styles from './textArea.module.scss';
 
 export const TextArea = ({ value, setValue }) => {
