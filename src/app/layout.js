@@ -10,7 +10,9 @@ const openSans = Open_Sans({
 export const metadata = {
 	title: 'Najlepsze strony internetowe dla Twojej Firmy | Toruń | Lotusite',
 	description: 'Strony internetowe Toruń - umów się na darmową konsultację! Naszą specjalizacją jest tworzenie nowoczesnych stron internetowych. Zadzwoń pod 723 741 772.',
-	icon: '/favicon.ico',
+	icons: {
+		icon: '/favicon.ico',
+	},
 };
 
 export default function RootLayout({ children }) {
