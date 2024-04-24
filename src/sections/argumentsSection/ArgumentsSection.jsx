@@ -1,12 +1,12 @@
 import Image from 'next/image';
-import styles from './faqSection.module.scss';
+import styles from './argumentsSection.module.scss';
 import { Section } from '@/components/section/Section';
 import { SectionTitle } from '@/components/sectionTitle/SectionTitle';
 import { CardTitle } from '@/components/cardTitle/CardTitle';
 import { Text } from '@/components/text/Text';
 import LinkButton from '@/components/linkButton/LinkButton';
 
-export const FaqSection = () => {
+export const ArgumentsSection = () => {
 	const firstParagraphs = [
 		'Sztuką nie jest stworzyć stronę, która wygląda pięknie, sztuką jest stworzyć stronę, która wygląda znakomicie, a jednocześnie działa w perfekcyjny sposób!',
 		'Tworzymy strony, które faktycznie działają. Dbamy o ich szybkość, estetyczny wygląd, dostępność dla każdego użytkownika oraz najlepsze możliwe rozwiązania.',

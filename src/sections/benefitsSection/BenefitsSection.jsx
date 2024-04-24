@@ -1,12 +1,12 @@
 import Image from 'next/image';
-import styles from './blogSection.module.scss';
+import styles from './benefitsSection.module.scss';
 import { Section } from '@/components/section/Section';
 import { SectionTitle } from '@/components/sectionTitle/SectionTitle';
 import { SectionEnding } from '@/components/sectionEnding/SectionEnding';
 import { InversedEnding } from '@/components/inversedEnding/InversedEnding';
 import { ScreenItem } from '@/components/screenItem/ScreenItem';
 
-export const BlogSection = () => {
+export const BenefitsSection = () => {
 	return (
 		<Section classes='section--blue'>
 			<Image alt='' data-image='1' className={styles.image} src='/desktop-icon.svg' width={193.02} height={171.8}/>

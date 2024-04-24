@@ -3,8 +3,8 @@ import { Header } from '@/components/header/Header';
 import { SuccessSection } from '@/sections/successSection/SuccessSection';
 import { BestSitesSection } from '@/sections/bestSitesSection/BestSitesSection';
 import { AdvantageSection } from '@/sections/advantageSection/AdvantageSection';
-import { BlogSection } from '@/sections/blogSection/BlogSection';
-import { FaqSection } from '@/sections/faqSection/FaqSection';
+import { BenefitsSection } from '@/sections/benefitsSection/BenefitsSection';
+import { ArgumentsSection } from '@/sections/argumentsSection/ArgumentsSection';
 
 const Homepage = () => {
 	const title = (
@@ -21,8 +21,8 @@ const Homepage = () => {
 			  <SuccessSection />
 			  <BestSitesSection />
 			  <AdvantageSection />
-			  <BlogSection />
-			  <FaqSection />
+			  <BenefitsSection />
+			  <ArgumentsSection />
 			</main>
 		</>
 	);
