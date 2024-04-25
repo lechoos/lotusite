@@ -10,6 +10,12 @@ import { ServiceCard } from '@/components/serviceCard/ServiceCard';
 import { MiniText } from '@/components/miniText/MiniText';
 import LinkButton from '@/components/linkButton/LinkButton';
 
+export const metadata = {
+	title: 'Poznaj nasze usługi | Toruń | Lotusite',
+	description:
+		'Tworzymy profesjonalne strony internetowe. Zainteresowany? Umów się na konsultację, bądź zadzwoń pod 723-741-772.',
+};
+
 const ServicesPage = () => {
 	const firstParagraphs = [
 		'W dzisiejszych czasach nowoczesne strony internetowe są podstawą rozwoju firmy. Wychodząc naprzeciw wyzwaniom dzisiejszego rynku stworzymy dla Ciebie najlepszą stronę internetową jaką kiedykolwiek widziałeś! W codziennej pracy korzystamy z najnowszych technologii i narzędzi. Po zapoznaniu się z Twoimi potrzebami dobierzemy dla Ciebie najlepsze rozwiązanie, które spełni Twoje wymagania, ale również będzie działać pierwszorzędnie!',
@@ -70,10 +76,10 @@ const ServicesPage = () => {
 								</MiniText>
 								<br />
 								<MiniText classes={styles.mini}>
-									Dzięki temu nasze strony już na starcie są daleko przed stronami Twojej
-									konkurencji. Są po prostu szybkie. Bardzo szybkie. Niezależnie od tego, czy jest to prosta wizytówka,
-									czy rozbudowana strona, gdzie można się wręcz zgubić - strona ładuje się praktycznie natychmiast. W
-									sam raz, by przykuć uwagę Twoich klientów.
+									Dzięki temu nasze strony już na starcie są daleko przed stronami Twojej konkurencji. Są po prostu
+									szybkie. Bardzo szybkie. Niezależnie od tego, czy jest to prosta wizytówka, czy rozbudowana strona,
+									gdzie można się wręcz zgubić - strona ładuje się praktycznie natychmiast. W sam raz, by przykuć uwagę
+									Twoich klientów.
 								</MiniText>
 							</ServiceCard>
 							<ServiceCard title='Wszystko pod kontrolą'>
@@ -90,11 +96,13 @@ const ServicesPage = () => {
 								</MiniText>
 							</ServiceCard>
 						</div>
-            <div className={styles['final-items']}>
-              <CardTitle classes={styles.final}>Podoba Ci się taka wizja?<span> Umów się na konsultację!</span></CardTitle>
-              <CardTitle classes={styles.final}>Sprawimy, że ta wizja stanie się rzeczywistością!</CardTitle>
-              <LinkButton>Umów się na konsultację</LinkButton>
-            </div>
+						<div className={styles['final-items']}>
+							<CardTitle classes={styles.final}>
+								Podoba Ci się taka wizja?<span> Umów się na konsultację!</span>
+							</CardTitle>
+							<CardTitle classes={styles.final}>Sprawimy, że ta wizja stanie się rzeczywistością!</CardTitle>
+							<LinkButton>Umów się na konsultację</LinkButton>
+						</div>
 					</div>
 				</Section>
 			</main>

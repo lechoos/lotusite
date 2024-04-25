@@ -1,7 +1,7 @@
 import LinkButton from '../linkButton/LinkButton';
 import styles from './header.module.scss';
 
-export const Header = ({ title, isHome }) => {
+export const Header = ({ title, isHome = false }) => {
 	return (
 		<header className={styles.header}>
 			<h1 className={styles.title}>{title}</h1>

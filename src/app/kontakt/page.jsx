@@ -6,11 +6,16 @@ import { SectionTitle } from '@/components/sectionTitle/SectionTitle';
 import { Text } from '@/components/text/Text';
 import { Form } from '@/components/form/Form';
 
+export const metadata = {
+	title: 'Skontaktuj się z nami | Toruń | Lotusite',
+	description: 'Czekamy na Twój kontakt. Nie zwlekaj, razem osiągniemy bardzo dużo. Chętnie pomożemy Ci w tworzeniu obecności online Twojego biznesu!',
+};
+
 const ContactPage = () => {
 	return (
 		<>
-      <Navbar />
-			<Header isHome={false} title='Twój sukces zaczyna się w Lotusite!' />
+			<Navbar />
+			<Header title='Twój sukces zaczyna się w Lotusite!' />
 			<Section>
 				<SectionEnding
 					style={{
@@ -26,7 +31,7 @@ const ContactPage = () => {
 						odezwiemy się do Ciebie z proponowanym terminem pierwszej (na pewno nie ostatniej😊) rozmowy
 					</Text>
 				</div>
-          <Form />
+				<Form />
 			</Section>
 		</>
 	);
