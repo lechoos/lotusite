@@ -1,6 +1,7 @@
 @use '../../scss/utils' as *;
 
 .footer {
+	display: none;
 	position: relative;
 	padding: 10rem 2rem;
 	background-color: $mainColor;
