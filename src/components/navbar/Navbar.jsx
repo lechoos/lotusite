@@ -20,9 +20,14 @@ export const Navbar = () => {
 			delay: 0.05,
 		},
 		{
+			name: 'Blog', 
+			path: '/blog', 
+			delay: 0.15,
+		},
+		{
 			name: 'Kontakt',
 			path: '/kontakt',
-			delay: 0.15,
+			delay: 0.25,
 		},
 	];
 
