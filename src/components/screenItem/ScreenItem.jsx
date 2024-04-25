@@ -1,4 +1,4 @@
-import styles from './singlePost.module.scss';
+import styles from './screenItem.module.scss';
 import { CardTitle } from '../cardTitle/CardTitle';
 import { Text } from '@/components/text/Text';
 
