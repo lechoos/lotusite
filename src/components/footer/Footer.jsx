@@ -32,7 +32,7 @@ export const Footer = () => {
 			<div className='wrapper'>
 				<div className={styles['footer-top']}>
 					<div className={styles['footer-left']}>
-						<Image alt='Logo firmy Lotusite' src='white-logo.svg' width={97.92} height={83.34} />
+						<Image alt='Logo firmy Lotusite' src='/white-logo.svg' width={97.92} height={83.34} />
 						<h2 className={`${styles.title} ${ubuntu.className}`}>Lotusite</h2>
 					</div>
 					<div className={styles['footer-right']}>
@@ -58,7 +58,7 @@ export const Footer = () => {
 			<div className={styles['footer-bottom']}>
 				<p>{year} &copy; Wszelkie prawa zastrzeżone</p>
 			</div>
-			<Image alt='' className={styles.decoration} src='pink-lines.svg' width={333} height={343} />
+			<Image alt='' className={styles.decoration} src='/pink-lines.svg' width={333} height={343} />
 		</footer>
 	);
 };
