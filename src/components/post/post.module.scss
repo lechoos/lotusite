@@ -1,0 +1,70 @@
+@use '../../scss/utils' as *;
+
+.post {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem;
+  max-width: 540px;
+  border: 3px solid $mainColor;
+  border-radius: 16px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.featured {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 192 / 144;
+}
+
+.title {
+  text-align: center;
+}
+
+.title, 
+.date {
+  font-weight: 700;
+}
+
+.image-container {
+  position: absolute;
+  height: 33%;
+  aspect-ratio: 1 / 1;
+  opacity: 0.25;
+  z-index: -1;
+
+  &:first-of-type {
+    top: -4px;
+    right: 0;
+  }
+  
+  &:last-of-type {
+    bottom: -4px;
+    left: 0;
+  }
+}
+
+.date {
+  color: #000;
+}
+
+.blue {
+  transform: rotate(-90deg); 
+}
+
+.pink {
+  transform: rotate(90deg);
+}
