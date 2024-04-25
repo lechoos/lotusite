@@ -3,7 +3,7 @@ import { Navbar } from '@/components/navbar/Navbar';
 import { Header } from '@/components/header/Header';
 import { getAllPostsMeta } from '@/lib/mdx';
 import { Section } from '@/components/section/Section';
-import Link from 'next/link';
+import { Post } from '@/components/post/Post';
 
 export const metadata = {
 	title: 'Najlepszy blog o tworzeniu stron internetowych | Lotusite',
@@ -19,11 +19,15 @@ const BlogPage = async () => {
 			<Navbar />
 			<Header title='Odkryj ciekawostki z naszego świata!' />
 			<Section>
-				<div>
+				<div className={`${styles['grid-container']} wrapper`}>
 					{posts?.map(post => (
-						<Link href={`/blog/${post.slug}`} key={post.title}>
-							<h3>{post.title}</h3>
-						</Link>
+						<Post
+							key={post.slug}
+							title={post.title}
+							link={post.slug}
+							date={post.date}
+							image={post.featuredImage}
+						/>
 					))}
 				</div>
 			</Section>
