@@ -12,14 +12,14 @@ const PrivacyPolicy = () => {
 				<Text>
 					Niniejsza polityka prywatności i plików cookies opisuje zasady postępowania z danymi osobowymi oraz
 					wykorzystywania plików cookies i innych technologii w ramach strony internetowej https://lotusite.pl.
-					Administratorem strony jest Piotr Lechowicz, zamieszkały w Toruniu 87-100, ul. Podgórna 30/1C. Kontakt z
-					administratorem możliwy pod adresem e-mail ptrlechowicz@gmail.com.
+					Administratorem strony jest Piotr Lechowicz, prowadzący działalność gospodarczą pod firmą Lotusite Piotr Lechowicz z siedzibą w Toruniu 87-100, ul. Podgórna 30/1C, wpisany do Centralnej Ewidencji i Informacji o Działalności Gospodarczej, posługujący się numerem NIP 9562393682. Kontakt z
+					administratorem możliwy pod adresem e-mail kontakt@lotusite.pl.
 				</Text>
 				<CardTitle classes={styles.subtitle}>§1 Definicje</CardTitle>
 				<Text>
 					1. Na potrzeby niniejszej polityki prywatności, przyjmuje się następujące znaczenie poniższych pojęć:
 				</Text>
-				<Text>a) Administrator – Piotr Lechowicz, zamieszkały w Toruniu 87-100, ul. Podgórna 30/1C.</Text>
+				<Text>a) Administrator – Piotr Lechowicz, prowadzący działalność gospodarczą pod firmą Lotusite Piotr Lechowicz z siedzibą w Toruniu 87-100, ul. Podgórna 30/1C, wpisany do Centralnej Ewidencji i Informacji o Działalności Gospodarczej, posługujący się numerem NIP 9562393682.</Text>
 				<Text>b) Strona – strona internetowa dostępna pod adresem   https://lotusite.pl</Text>
 				<Text>c) Użytkownik – każdy podmiot, który korzysta ze Strony.</Text>
 				<CardTitle classes={styles.subtitle}>§2 Dane osobowe</CardTitle>
