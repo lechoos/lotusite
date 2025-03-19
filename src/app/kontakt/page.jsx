@@ -6,6 +6,14 @@ import { SectionTitle } from '@/components/sectionTitle/SectionTitle';
 import { Text } from '@/components/text/Text';
 import { Form } from '@/components/form/Form';
 
+export const metadata = {
+	alternates: {
+		canonical: '/kontakt',
+	},
+	title: 'Skontaktuj się z nami | Toruń | Lotusite',
+	description: 'Skontaktuj się z nami, a pomożemy Ci w realizacji Twoich marzeń o nowoczesnej stronie internetowej.',
+};
+
 const ContactPage = () => {
 	return (
 		<>
