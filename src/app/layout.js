@@ -1,6 +1,7 @@
 import { Open_Sans } from 'next/font/google';
 import './globals.scss';
 import { Footer } from '@/components/footer/Footer';
+import { Analytics } from '@vercel/analytics/next';
 
 const openSans = Open_Sans({
 	weight: ['400', '700'],
@@ -68,6 +69,7 @@ export default function RootLayout({ children }) {
 			<body className={openSans.className}>
 				{children}
 				<Footer />
+				<Analytics />
 			</body>
 		</html>
 	);
