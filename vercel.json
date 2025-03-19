@@ -1,0 +1,7 @@
+{
+	"redirects": [
+		{ "source": "http://lotusite.pl/:path*", "destination": "https://lotusite.pl/:path*", "permanent": true },
+		{ "source": "http://www.lotusite.pl/:path*", "destination": "https://lotusite.pl/:path*", "permanent": true },
+		{ "source": "https://www.lotusite.pl/:path*", "destination": "https://lotusite.pl/:path*", "permanent": true }
+	]
+}

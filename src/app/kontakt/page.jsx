@@ -10,14 +10,19 @@ export const metadata = {
 	alternates: {
 		canonical: '/kontakt',
 	},
-	title: 'Skontaktuj się z nami | Toruń | Lotusite',
+	title: 'Skontaktuj się z nami | Lotusite',
 	description: 'Skontaktuj się z nami, a pomożemy Ci w realizacji Twoich marzeń o nowoczesnej stronie internetowej.',
+	openGraph: {
+		title: 'Skontaktuj się z nami | Lotusite',
+		description: 'Skontaktuj się z nami, a pomożemy Ci w realizacji Twoich marzeń o nowoczesnej stronie internetowej.',
+		url: 'https://lotusite.pl/kontakt',
+	},
 };
 
 const ContactPage = () => {
 	return (
 		<>
-      <Navbar />
+			<Navbar />
 			<Header isHome={false} title='Twój sukces zaczyna się w Lotusite!' />
 			<Section>
 				<SectionEnding
@@ -34,7 +39,7 @@ const ContactPage = () => {
 						odezwiemy się do Ciebie z proponowanym terminem pierwszej (na pewno nie ostatniej😊) rozmowy
 					</Text>
 				</div>
-          <Form />
+				<Form />
 			</Section>
 		</>
 	);

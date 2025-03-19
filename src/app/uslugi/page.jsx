@@ -14,8 +14,24 @@ export const metadata = {
 	alternates: {
 		canonical: '/uslugi',
 	},
-	title: 'Poznaj nasze usługi | Toruń | Lotusite',
-	description: 'Tworzymy profesjonalne strony internetowe. Zainteresowany? Umów się na konsultację, bądź zadzwoń pod 723-741-772.',
+	title: 'Usługi tworzenia stron internetowych | Lotusite',
+	description:
+		'Tworzymy profesjonalne strony internetowe. Zainteresowany? Umów się na konsultację, bądź zadzwoń pod 723-741-772.',
+	keywords: [
+		'usługi webowe',
+		'projektowanie stron',
+		'tworzenie sklepów',
+		'strony na WordPressie',
+		'strony na NextJS',
+		'WordPress',
+		'NextJS',
+	],
+	openGraph: {
+		title: 'Usługi tworzenia stron internetowych | Lotusite',
+		description:
+			'Tworzymy profesjonalne strony internetowe. Zainteresowany? Umów się na konsultację, bądź zadzwoń pod 723-741-772.',
+		url: 'https://lotusite.pl/uslugi',
+	},
 };
 
 const ServicesPage = () => {
@@ -78,10 +94,10 @@ const ServicesPage = () => {
 								</MiniText>
 								<br />
 								<MiniText classes={styles.mini}>
-									Dzięki temu nasze strony już na starcie są daleko przed stronami Twojej
-									konkurencji. Są po prostu szybkie. Bardzo szybkie. Niezależnie od tego, czy jest to prosta wizytówka,
-									czy rozbudowana strona, gdzie można się wręcz zgubić - strona ładuje się praktycznie natychmiast. W
-									sam raz, by przykuć uwagę Twoich klientów.
+									Dzięki temu nasze strony już na starcie są daleko przed stronami Twojej konkurencji. Są po prostu
+									szybkie. Bardzo szybkie. Niezależnie od tego, czy jest to prosta wizytówka, czy rozbudowana strona,
+									gdzie można się wręcz zgubić - strona ładuje się praktycznie natychmiast. W sam raz, by przykuć uwagę
+									Twoich klientów.
 								</MiniText>
 							</ServiceCard>
 							<ServiceCard title='Wszystko pod kontrolą'>
@@ -98,11 +114,13 @@ const ServicesPage = () => {
 								</MiniText>
 							</ServiceCard>
 						</div>
-            <div className={styles['final-items']}>
-              <CardTitle classes={styles.final}>Podoba Ci się taka wizja?<span> Umów się na konsultację!</span></CardTitle>
-              <CardTitle classes={styles.final}>Sprawimy, że ta wizja stanie się rzeczywistością!</CardTitle>
-              <LinkButton>Umów się na konsultację</LinkButton>
-            </div>
+						<div className={styles['final-items']}>
+							<CardTitle classes={styles.final}>
+								Podoba Ci się taka wizja?<span> Umów się na konsultację!</span>
+							</CardTitle>
+							<CardTitle classes={styles.final}>Sprawimy, że ta wizja stanie się rzeczywistością!</CardTitle>
+							<LinkButton>Umów się na konsultację</LinkButton>
+						</div>
 					</div>
 				</Section>
 			</main>
