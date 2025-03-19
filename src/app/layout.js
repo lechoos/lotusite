@@ -9,18 +9,19 @@ const openSans = Open_Sans({
 
 export const metadata = {
 	title: 'Najlepsze strony internetowe dla Twojej Firmy | Toruń | Lotusite',
-	description: 'Strony internetowe Toruń - umów się na darmową konsultację! Naszą specjalizacją jest tworzenie nowoczesnych stron internetowych. Zadzwoń pod 723 741 772.',
+	description:
+		'Strony internetowe Toruń - umów się na darmową konsultację! Naszą specjalizacją jest tworzenie nowoczesnych stron internetowych. Zadzwoń pod 723 741 772.',
 	icons: {
-    icon: [
-      {
-        url: "/favicon.ico", // /public path
-        href: "/favicon.ico", // /public path
-      },
-    ],
-  },
+		icon: [
+			{
+				url: '/images/favicon.ico', // /public path
+				href: '/images/favicon.ico', // /public path
+			},
+		],
+	},
 	robots: {
-		noimageindex: true
-	}
+		noimageindex: true,
+	},
 };
 
 export default function RootLayout({ children }) {
