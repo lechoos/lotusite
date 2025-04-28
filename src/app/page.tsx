@@ -11,18 +11,18 @@ const Homepage = () => {
 		<>
 			Nowoczesne strony dla <span>Twojego biznesu</span>
 		</>
-	)
+	);
 
 	return (
 		<>
 			<Navbar />
-			<Header title={title} isHome={true} />
+			<Header title={title} isHome />
 			<main>
-			  <SuccessSection />
-			  <BestSitesSection />
-			  <AdvantageSection />
-			  <BenefitsSection />
-			  <ArgumentsSection />
+				<SuccessSection />
+				<BestSitesSection />
+				<AdvantageSection />
+				<BenefitsSection />
+				<ArgumentsSection />
 			</main>
 		</>
 	);

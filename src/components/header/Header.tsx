@@ -1,8 +1,9 @@
+import { ReactNode } from 'react';
 import LinkButton from '../linkButton/LinkButton';
 import styles from './header.module.scss';
 
 interface Props {
-	title: string;
+	title: string | ReactNode;
 	isHome: boolean;
 }
 
