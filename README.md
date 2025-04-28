@@ -1,6 +1,7 @@
 # Lotusite
 
 The project is the website of Lotusite, a web development company. The main purpose of the website is to promote the company and to become its business card on the Internet.
+Soon the project will be fully rewritten into TypeScript.
 
 ## Tech stack
 
