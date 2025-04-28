@@ -1,7 +1,12 @@
 import LinkButton from '../linkButton/LinkButton';
 import styles from './header.module.scss';
 
-export const Header = ({ title, isHome }) => {
+interface Props {
+	title: string;
+	isHome: boolean;
+}
+
+export const Header = ({ title, isHome }: Props) => {
 	return (
 		<header className={styles.header}>
 			<h1 className={styles.title}>{title}</h1>

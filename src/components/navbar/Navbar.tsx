@@ -1,10 +1,10 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
-import styles from './notNavbar.module.scss';
+import { useState, useEffect, useRef, type CSSProperties } from 'react';
+import styles from './navbar.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
-import NavLink from '../navbar/navLink/NavLink';
+import NavLink from './navLink/NavLink';
 
 export const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +27,7 @@ export const Navbar = () => {
 	];
 
 	useEffect(() => {
-		const handleClickOutside = e => {
+		const handleClickOutside = (e: MouseEvent) => {
 			if (navRef.current && !navRef.current.contains(e.target)) {
 				setIsOpen(false);
 			}
@@ -48,7 +48,7 @@ export const Navbar = () => {
 				className={styles.logo} 
 				href='/'
 			>
-				<Image src='/logo.svg' alt='Logo firmy Lotusite' fill />
+				<Image src='/white-logo.svg' alt='Logo firmy Lotusite' fill />
 			</Link>
 			<button
 				className={`hamburger hamburger--collapse ${isActive} ${styles.button}`}
@@ -63,7 +63,7 @@ export const Navbar = () => {
 			<div className={`${styles.navItems} ${isOpen ? styles['is-active'] : ''}`}>
 				<Image className={styles.decoration} src='/blue-grid.svg' alt='' width={300} height={300} />
 				{links.map(link => (
-					<NavLink style={{ '--delay': link.delay + 's', color: '#000' }} classes={areLinksActive} key={link.path} link={link} />
+					<NavLink style={{ '--delay': link.delay + 's' } as CSSProperties} classes={areLinksActive} key={link.path} link={link} />
 				))}
 			</div>
 		</nav>

@@ -1,7 +1,9 @@
 import { Open_Sans } from 'next/font/google';
-import './globals.scss';
+import { ReactNode } from 'react';
 import { Footer } from '@/components/footer/Footer';
 import { Analytics } from '@vercel/analytics/next';
+
+import './globals.scss';
 
 const openSans = Open_Sans({
 	weight: ['400', '700'],
@@ -63,7 +65,7 @@ export const metadata = {
 	},
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang='pl-PL'>
 			<body className={openSans.className}>

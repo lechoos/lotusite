@@ -1,30 +1,34 @@
-import { Body, Button, Container, Head, Html, Img, Link, Preview, Section, Text } from '@react-email/components';
+import { Body, Button, Container, Head, Html, Link, Preview, Section, Text } from '@react-email/components';
 import * as React from 'react';
 
-export const GithubAccessTokenEmail = (formData) => (
+interface FormData {
+	name: string;
+	email: string;
+	phone: string;
+	message: string;
+	company: string;
+}
+
+export const GithubAccessTokenEmail = (formData: FormData) => (
 	<Html lang='pl'>
 		<Head />
 		<Preview>Dziękuję za wiadomość</Preview>
 		<Body style={main}>
 			<Container style={container}>
 				<Text style={title}>
-				 <strong>{formData.name}</strong>, {formData.company} :)
+					<strong>{formData.name}</strong>, {formData.company} :)
 				</Text>
 
 				<Section style={sectionBlue}>
 					<Text style={text}>
 						Cześć <strong>{formData.email}</strong>!
 					</Text>
-					<Text style={text}>
-						{formData.phone}  
-					</Text>
-					<Text style={text}>
-						{formData.message}  
-					</Text>
+					<Text style={text}>{formData.phone}</Text>
+					<Text style={text}>{formData.message}</Text>
 
-					<Button href="https://lotusite.pl" style={button}></Button>
+					<Button href='https://lotusite.pl' style={button}></Button>
 				</Section>
-				<Text style={links}>
+				<Text style={{ textAlign: 'center' }}>
 					<Link style={link}>Audyt bezpieczeństwa</Link> ・ <Link style={link}>Kontakt</Link>
 				</Text>
 			</Container>
@@ -56,23 +60,16 @@ const title = {
 	lineHeight: 1.25,
 };
 
-const section = {
-	padding: '24px',
-	border: 'solid 1px #dedede',
-	borderRadius: '5px',
-	textAlign: 'center',
-};
-
 const sectionBlue = {
 	padding: '24px',
 	backgroundColor: '#54aedf',
 	borderRadius: '16px',
-	textAlign: 'center',
+	'text-align': 'center',
 };
 
 const text = {
 	margin: '0 0 10px 0',
-	textAlign: 'left',
+	'text-align': 'left',
 };
 
 const button = {
@@ -84,18 +81,7 @@ const button = {
 	padding: '12px 24px',
 };
 
-const links = {
-	textAlign: 'center',
-};
-
 const link = {
 	color: '#0366d6',
 	fontSize: '12px',
-};
-
-const footer = {
-	color: '#6a737d',
-	fontSize: '12px',
-	textAlign: 'center',
-	marginTop: '60px',
 };
